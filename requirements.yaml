@@ -1,4 +1,4 @@
 dependencies:
-- name: demo
+- name: bluegreen
   version: 0.1.0
   repository: https://adyb-fj-cns.github.io/helm-chart/
