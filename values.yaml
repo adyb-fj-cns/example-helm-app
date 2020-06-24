@@ -12,18 +12,15 @@ bluegreen:
         enabled: true
         annotations:
             kubernetes.io/ingress.class: nginx
-            # kubernetes.io/tls-acme: "true"
-        hosts:
+            ingress.kubernetes.io/rewrite-target: /
+
+        activeHosts:           
         - host: example-helm-app.kubernetes.local
           paths: 
-          - path: /
-            backend:
-                serviceName: {{ include "bluegreen.fullname" . }}-active
-                servicePort: 80
-        - host: example-helm-app-preview.kubernetes.local
+            - /
+            
+        previewHosts:           
+        - host: example-helm-app.kubernetes.local
           paths: 
-          - path: /
-            backend:
-                serviceName: {{ include "bluegreen.fullname" . }}-preview
-                servicePort: 80
+            - /
     
