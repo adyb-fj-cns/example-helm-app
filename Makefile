@@ -15,3 +15,6 @@ create-app:
 
 sync-app:
 	argocd app sync example-helm-app
+
+delete-app:
+	argocd app delete example-helm-app
