@@ -18,9 +18,9 @@ bluegreen:
         - host: example-helm-app.kubernetes.local
           paths: 
             - /
-            
+
         previewHosts:           
-        - host: example-helm-app.kubernetes.local
+        - host: example-helm-app-preview.kubernetes.local
           paths: 
             - /
     
