@@ -1,9 +1,9 @@
 bluegreen:
     replicaCount: 5
-    
+
     image:
         repository: nginx
-        tag: 1.15.4
+        tag: 1.15.5
 
     service:
         type: NodePort
