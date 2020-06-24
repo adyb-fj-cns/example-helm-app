@@ -7,4 +7,13 @@ bluegreen:
 
     service:
         type: NodePort
+
+    ingress:
+        enabled: true
+        annotations:
+            kubernetes.io/ingress.class: nginx
+            # kubernetes.io/tls-acme: "true"
+        hosts:
+        - host: example-help-app.kubernetes.local
+          paths: []
     
