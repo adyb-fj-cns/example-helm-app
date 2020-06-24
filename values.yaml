@@ -3,7 +3,7 @@ bluegreen:
 
     image:
         repository: nginx
-        tag: 1.15.5
+        tag: 1.17.0
 
     service:
         type: NodePort
