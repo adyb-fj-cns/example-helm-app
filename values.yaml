@@ -23,4 +23,30 @@ bluegreen:
         - host: example-helm-app-preview.kubernetes.local
           paths: 
             - /
-    
+
+bluegreen2:
+    replicaCount: 5
+
+    image:
+        repository: nginx
+        tag: 1.17.0
+
+    service:
+        type: NodePort
+
+    ingress:
+        enabled: true
+        annotations:
+            kubernetes.io/ingress.class: nginx
+            ingress.kubernetes.io/rewrite-target: /
+
+        activeHosts:           
+        - host: example-helm-app-2.kubernetes.local
+          paths: 
+            - /
+
+        previewHosts:           
+        - host: example-helm-app-2-preview.kubernetes.local
+          paths: 
+            - /
+ 
