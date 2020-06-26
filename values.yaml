@@ -2,8 +2,8 @@ bluegreen:
     replicaCount: 2
 
     image:
-        repository: nginx
-        tag: 1.17.1
+        repository: adybfjcns/python-microservice
+        tag: dind-94b7e06
 
     service:
         type: NodePort
@@ -28,8 +28,8 @@ demo:
     replicaCount: 2
 
     image:
-        repository: nginx
-        tag: 1.17.0
+        repository: adybfjcns/python-microservice
+        tag: kaniko-94b7e06
 
     service:
         type: NodePort
