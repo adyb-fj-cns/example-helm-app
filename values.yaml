@@ -1,5 +1,5 @@
 bluegreen:
-    replicaCount: 3
+    replicaCount: 2
 
     image:
         repository: nginx
@@ -15,17 +15,17 @@ bluegreen:
             ingress.kubernetes.io/rewrite-target: /
 
         activeHosts:           
-        - host: example-helm-app.kubernetes.local
+        - host: example-helm-app-bluegreen.kubernetes.local
           paths: 
             - /
 
         previewHosts:           
-        - host: example-helm-app-preview.kubernetes.local
+        - host: example-helm-app-bluegreen-preview.kubernetes.local
           paths: 
             - /
 
-bluegreen2:
-    replicaCount: 3
+demo:
+    replicaCount: 2
 
     image:
         repository: nginx
@@ -40,13 +40,8 @@ bluegreen2:
             kubernetes.io/ingress.class: nginx
             ingress.kubernetes.io/rewrite-target: /
 
-        activeHosts:           
-        - host: example-helm-app-2.kubernetes.local
-          paths: 
-            - /
-
-        previewHosts:           
-        - host: example-helm-app-2-preview.kubernetes.local
+        hosts:           
+        - host: example-helm-app-demo.kubernetes.local
           paths: 
             - /
  
