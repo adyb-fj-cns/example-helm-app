@@ -1,9 +1,9 @@
 bluegreen:
-    replicaCount: 2
+    replicaCount: 1
 
     image:
-        repository: adybfjcns/python-microservice
-        tag: dind-94b7e06
+        repository: nginx
+        tag: stable
 
     service:
         type: NodePort
@@ -25,7 +25,7 @@ bluegreen:
             - /
 
 demo:
-    replicaCount: 2
+    replicaCount: 1
 
     image:
         repository: adybfjcns/python-microservice
@@ -33,6 +33,7 @@ demo:
 
     service:
         type: NodePort
+        port: 5000
 
     ingress:
         enabled: true
@@ -43,5 +44,5 @@ demo:
         hosts:           
         - host: example-helm-app-demo.kubernetes.local
           paths: 
-            - /
+            - /python
  
