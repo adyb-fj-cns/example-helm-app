@@ -3,7 +3,7 @@ bluegreen:
 
     image:
         repository: adybfjcns/python-microservice
-        tag: kaniko-94b7e06
+        tag: bbb3309
 
     service:
         type: NodePort
